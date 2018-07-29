@@ -1,0 +1,22 @@
+{
+    "short_name": "eScreensaver",
+    "name": "eReader Screensaver",
+    "icons": [
+        {
+            "src": "images/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#f3d111",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/docs/",
+    "theme_color": "#f3d111"
+}

@@ -14,5 +14,5 @@ gulp.task('css-deal', function() {
         .pipe(prefix({
             browsers: ['last 1 version']
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./docs/dist'))
 })
