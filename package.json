@@ -1,0 +1,15 @@
+{
+  "name": "ereader-screensaver",
+  "version": "0.0.1",
+  "description": "An application to download backgrounds for your eReader.",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/SrPhilippe/ereader-screensaver.git",
+  "author": "SrPhilippe <philippehenrique@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
