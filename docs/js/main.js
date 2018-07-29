@@ -1,5 +1,9 @@
 let dropdown = document.querySelectorAll('#menu ul>li')
 
+window.addEventListener('beforeinstallprompt', e => {
+    prompt()
+})
+
 dropdown.forEach(el => {
     let iconDropdown = document.createElement('i');
     iconDropdown.classList.add('fas', 'fa-chevron-right');
