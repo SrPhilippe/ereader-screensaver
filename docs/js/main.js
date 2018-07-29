@@ -1,5 +1,13 @@
 let dropdown = document.querySelectorAll('#menu ul>li')
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(function() {
+            console.log("Service Worker Registered")
+        })
+}
+
 window.addEventListener('beforeinstallprompt', e => {
     prompt()
 })
