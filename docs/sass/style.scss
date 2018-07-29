@@ -1,3 +1,11 @@
+$hl: #f3d111;
+$dk: #222;
+
+@font-face {
+    font-family: 'San Francisco';
+    src: url(../docs/fonts/san-francisco-regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +14,61 @@
 
 a {
     display: inline-block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 body {
     font-size: 18px;
+    font-family: 'San Francisco';
 }
+
+#menu {
+    background-color: $dk;
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .nav {
+            display: none;
+            &:hover {
+                cursor: pointer;
+            }
+            >div {
+                background-color: #fff;
+                width: 50px;
+                height: 3px;
+                margin: 13px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+            }
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            >li {
+                &:hover {
+                    a {
+                        color: $hl;
+                    }
+                }
+                a {
+                    font-size: 1.2em;
+                    padding: 1.1em 1.3em;
+                    color: #fff;
+                    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+                    >.fas {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'mobile';
