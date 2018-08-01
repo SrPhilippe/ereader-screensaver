@@ -18,33 +18,41 @@
 <body>
     <nav id="menu">
         <div class="container">
-            <div class="mobile-nav">
-                <div class="nav">
+            <div class="siblings">
+                <div class="mobile-nav">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">eReader Model</a>
-                        <ul>
-                            <li><a href="#">Kindle</a></li>
-                            <li><a href="#">Lev</a></li>
-                            <li><a href="#">Sea</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Resolutions</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
+                <form id="search-bar">
+                    <input type="text" name="query" autocomplete="off" placeholder="Search">
+                    <div class="icon-search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </form>
             </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">eReader Model</a>
+                    <ul>
+                        <li><a href="#">Kindle</a></li>
+                        <li><a href="#">Lev</a>
+                            <ul>
+                                <li><a href="#">item 2</a></li>
+                                <li><a href="#">item 3</a></li>
+                                <li><a href="#">item 4</a></li>
+                                <li><a href="#">item 1</a></li>
+                                <li><a href="#">item 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sea</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Resolutions</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
         </div>
-        <form id="search-bar">
-            <input type="text" name="query" autocomplete="off" placeholder="Search">
-            <div class="icon-search">
-                <i class="fas fa-search"></i>
-            </div>
-        </form>
     </nav>
     <div id="header">
         <div class="container">

@@ -1,12 +1,18 @@
 @media screen and (max-width: 768px) {
     #menu {
         flex-direction: column;
-        .mobile-nav {
+        .container {
             flex-direction: column;
             align-items: flex-start;
-            .nav {
-                display: block;
-                padding: 10px;
+            .siblings {
+                .mobile-nav {
+                    display: inline-block;
+                    padding: 10px;
+                }
+                #search-bar {
+                    top: 10px;
+                    right: 30px;
+                }
             }
             ul {
                 flex-direction: column;
@@ -19,10 +25,14 @@
             }
         }
     }
-
-    #search-bar {
-        position: absolute;
-        top: 10px;
-        right: 30px;
+    #header {
+        .container {
+            padding: 0 20px;
+            .logo-container {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
