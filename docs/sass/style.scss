@@ -76,6 +76,9 @@ body {
                     position: relative;
                     max-width: 330px;
                     width: 100%;
+                    &::-webkit-search-cancel-button {
+                        appearance: none;
+                    }
                 }
                 .icon-search {
                     position: absolute;
@@ -143,8 +146,13 @@ body {
             padding: 2.5em 0;
             box-shadow: 0 1.5px 0 rgba(0, 0, 0, .13);
             border-radius: 0 0 30px 30px;
-            img {
+            >a {
                 max-width: 60%;
+            }
+        }
+        .theater {
+            .slick-slide {
+                margin: 10px;
             }
         }
     }
