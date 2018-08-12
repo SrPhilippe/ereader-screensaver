@@ -66,12 +66,12 @@ $(document).ready(function() {
         })
     }
 
-    function toggleDropdown(evt) {
-        if (evt.type === 'mouseenter') {
+    function toggleDropdown(event) {
+        if (event.type === 'mouseenter') {
             event.currentTarget.children.item(1).style.display = 'flex'
-        } else if (evt.type === 'mouseleave') {
+        } else if (event.type === 'mouseleave') {
             event.currentTarget.children.item(1).style.display = 'none'
-        } else if (evt.type === 'click') {
+        } else if (event.type === 'click') {
             clicked = !clicked
             if (clicked) {
                 event.currentTarget.children.item(1).style.display = 'flex'
