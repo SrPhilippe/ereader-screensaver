@@ -40,33 +40,13 @@ $(document).ready(function() {
             slidesToShow: 3
 
         }
-
-
-    test.checkDropdowns()
-    test.getListLength()
     $('#header .container .theater').slick(slickConfig)
 
 
-
+    updateMobile()
     window.addEventListener('resize', event => {
         updateInteractions(window.innerWidth)
-
-        if (window.innerWidth < 768) {
-            let showMenu = false
-            menuContent.style.display = 'none'
-            mobileBar.addEventListener('click', toggleMenu)
-
-            function toggleMenu(event) {
-                showMenu = !showMenu
-                if (showMenu) {
-                    menuContent.style.display = 'flex'
-                } else {
-                    menuContent.style.display = 'none'
-                }
-            }
-        } else {
-            menuContent.style.display = 'flex'
-        }
+        updateMobile()
     })
 
     function updateInteractions(clientWidth) {
@@ -102,6 +82,25 @@ $(document).ready(function() {
             console.log('Something went wrong. The event fired is not set on this element!')
         }
 
+    }
+
+    function updateMobile() {
+        if (window.innerWidth < 768) {
+            let showMenu = false
+            menuContent.style.display = 'none'
+            mobileBar.addEventListener('click', toggleMenu)
+
+            function toggleMenu(event) {
+                showMenu = !showMenu
+                if (showMenu) {
+                    menuContent.style.display = 'flex'
+                } else {
+                    menuContent.style.display = 'none'
+                }
+            }
+        } else {
+            menuContent.style.display = 'flex'
+        }
     }
 
     dropdown.forEach(el => {
