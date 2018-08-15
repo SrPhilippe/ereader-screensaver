@@ -42,6 +42,8 @@ $(document).ready(function() {
         }
     $('#header .container .theater').slick(slickConfig)
 
+    let currentDate = new Date()
+    document.getElementById('footer-current-date').textContent = currentDate.getFullYear()
 
     updateMobile()
     window.addEventListener('resize', event => {
@@ -111,5 +113,41 @@ $(document).ready(function() {
             updateInteractions(window.innerWidth)
         }
     })
+
+    getAll()
+    saveUser('jhon', 'pudim')
+    getAll()
+
+    function getAll() {
+        let request = new Request('data.json')
+        fetch(request)
+            .then(resp => {
+                return resp.json()
+            })
+            .then(data => {
+                console.log(data)
+            })
+    }
+
+    function saveUser(name, food) {
+        let url = 'data.json',
+            data = {
+                users: {
+                    mend: "test"
+                }
+            }
+        fetch(data, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+            .then(resp => {
+                resp.json()
+            })
+            .catch(err => console.error(err))
+    }
 
 });
