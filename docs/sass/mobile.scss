@@ -1,4 +1,7 @@
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
     #menu {
         flex-direction: column;
         .container {
@@ -37,6 +40,31 @@
     }
     #footer {
         .container {
+            padding: 30px;
+        }
+        >.container {
+            flex-direction: column;
+            .item {
+                margin: 0;
+                h3 {
+                    text-align: center;
+                }
+                li {
+                    width: auto;
+                    a {
+                        text-align: center;
+                        width: 100%;
+                        padding-left: 50px;
+                    }
+                }
+            }
+        }
+        .bottom {
+            >.container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
