@@ -1,2 +1,2 @@
 ## About
-eReader Screensaver it's a web application to download backgrounds for eReader devices.
+e-Reader Screensaver it's a web application to download backgrounds for eReader devices.
