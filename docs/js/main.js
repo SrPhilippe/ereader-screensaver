@@ -113,9 +113,9 @@ $(document).ready(function() {
     }
 
     dropdown.forEach(el => {
-        let iconDropdown = document.createElement('i')
-        iconDropdown.classList.add('fas', 'fa-chevron-right')
         if (el.children.length > 1) {
+            let iconDropdown = document.createElement('i')
+            iconDropdown.classList.add('fas', 'fa-chevron-right')
             el.children.item(0).appendChild(iconDropdown)
             updateInteractions(window.innerWidth)
         }
