@@ -3,11 +3,11 @@ let gulp = require('gulp'),
     csso = require('gulp-csso'),
     prefix = require('gulp-autoprefixer')
 
-gulp.task('default', function() {
+gulp.task('default', () => {
     gulp.watch('./docs/**/*.scss', ['css-deal'])
 })
 
-gulp.task('css-deal', function() {
+gulp.task('css-deal', () => {
     gulp.src('./docs/sass/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(csso())

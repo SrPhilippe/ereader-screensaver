@@ -1,28 +1,4 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/sw.js')
-        .then(registration => {
-            let serviceWorker
-            if (registration.installing) {
-                serviceWorker = registration.installing
-            } else if (registration.waiting) {
-                serviceWorker = registration.waiting
-            } else if (registration.active) {
-                serviceWorker = registration.active
-            }
-            if (serviceWorker) {
-                console.log(`ServiceWork state => ${serviceWorker.state}`)
-                serviceWorker.addEventListener('statechange', event => {
-                    console.log(event.target.state)
-                })
-            }
-        })
-    window.addEventListener('beforeinstallprompt', e => {
-        prompt()
-    })
-}
-
-$(document).ready(function() {
+$(document).ready(function () {
     let dropdown = document.querySelectorAll('#menu .container>ul>li'),
         mobileBar = document.querySelector('#menu .mobile-nav'),
         menuContent = document.querySelector('#menu>.container>ul'),
@@ -121,3 +97,14 @@ $(document).ready(function() {
         }
     })
 });
+
+
+const $bodyDivs = document.querySelectorAll('body > div')
+
+$bodyDivs.forEach((el) => {
+    let unknownEl = el.firstChild
+    if (unknownEl.nodeName === 'A' && unknownEl.querySelector('img').getAttribute('alt') === 'www.000webhost.com') {
+        console.log("ALRIGHT DUDE")
+        el.remove() // Removes the webhost element from the DOM
+    }
+})
